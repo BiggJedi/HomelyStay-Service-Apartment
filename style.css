@@ -633,9 +633,6 @@ h1 {
     align-items: center;
 }
 
-.content .left .right .box{
-}
-
 @media (max-width: 768px) {
     .news .items img {
         width: 50%;
