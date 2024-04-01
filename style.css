@@ -63,84 +63,6 @@ button {
 
 
 /* --------header---------- */
-header {
-    height: 10vh;
-    line-height: 10vh;
-    padding: 0 20px;
-}
-
-header img {
-    margin: 20px 0;
-}
-
-header ul {
-    display: inline-block;
-}
-
-header ul li {
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-header ul li a {
-    color: #000;
-    margin: 0 10px;
-    transition: 0.5s;
-}
-
-
-
-header ul li a:hover {
-    color: #0A369D;
-}
-
-header i{
-    margin: 0 20px;
-}
-
-header button {
-    padding: 13px 40px;
-}
-
-header .navlinks span {
-    display: none;
-}
-
-@media only screen and (max-width:768px) {
-    header ul  {
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: #328ea8;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        text-align: center;
-        z-index: 9;
-    }
-
-    header ul li {
-        display: block;
-    }
-
-    header ul li a {
-        color: white;
-    }
-
-    header i {
-        color: white;
-    }
-
-    header .navlinks span {
-        color: black;
-        display: block;
-        cursor: pointer;
-        line-height: 10vh;
-        font-size: 25px;
-    }
-}
-/* --------header---------- */
 
 
 /*----------home-----------*/
@@ -196,6 +118,9 @@ header .navlinks span {
 
 
 /*----------book-----------*/
+.book{
+    width: 100%;
+}
 .grid {
     display: column;
     grid-template-columns: repeat (5, 1fr);
@@ -204,9 +129,15 @@ header .navlinks span {
 .book .container .text h1{
     color: white;
 }
+.book .container{
+    display: flex;
+    flex-direction: row;
+}
 .form .grid {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .form .grid input{
@@ -214,9 +145,10 @@ header .navlinks span {
 }
 
 .form .grid input[type='submit'] {
-    width: 250px;
+    width: 150px;
     background-color: black;
     color: white;
+    font-size: 10px;
 }
 
 input {
@@ -251,15 +183,44 @@ h1 {
     background: #0A369D;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .book .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .form .grid {
+        flex-direction: column; 
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form .grid input{
+        width: 90%;
+    }
+    
+    .form .grid input[type='submit'] {
+        width: 90%;
+        font-size: 10px;
+    }
+}
 /*----------book-----------*/
 
 /*-----------about---------*/
+.about .container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+}
 .left, .right {
     width: 50%;
-    padding: 30px;
+    /* padding: 30px; */
 }
 
-.mtop {
+.top {
     margin-top: 40px;
 }
 
@@ -299,7 +260,19 @@ h1 {
 .about button {
     margin: 30px 0;
 }
+
+@media (max-width: 768px) {
+    .about .container{
+        flex-direction: column; 
+    }
+
+    .about .container .right img{
+        width: 100%;
+    }
+}
 /*-----------about---------*/
+
+
 .counter {
     background-image: url("./Images/Apartment\ 5.webp");
     background-size: cover;
@@ -661,6 +634,12 @@ h1 {
 }
 
 .content .left .right .box{
+}
+
+@media (max-width: 768px) {
+    .news .items img {
+        width: 50%;
+    }
 }
 /*-----------news----------*/
 

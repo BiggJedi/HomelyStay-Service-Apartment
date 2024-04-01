@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homelystay</title>
     <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
      referrerpolicy="no-referrer" />
@@ -16,45 +20,53 @@
 
 <body>
     
+<header >
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container">
+          <a class="navbar-nav"><img src="Images/HOMELYSTAY 2.png" alt="logo" height="40px">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#rooms">Rooms</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" >Pages</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" > News</a>
+              </li>
 
-<header>
-    <div class="content flex_space">
-        <div class="logo">
-            <img src="Images/HOMELYSTAY 2.png" alt="" height="40px">
+              <li class="nav-item">
+                <a class="nav-link" > Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    <div class="navlinks">
-        <ul id="menulinks">
-            <li><a href="#home">home</a> </li>
-            <li><a href="#about">about</a> </li>
-            <li><a href="#rooms">rooms</a> </li>
-            <li><a href="#pages">pages</a> </li>
-            <li><a href="#news">news</a> </li>
-            <li><a href="#contact">contact</a> </li>
-            <li> <i class="fa fa-search"></i> </li>
-            <li> <button class="primary-btn">BOOK NOW</button> </li>
-        </ul>
-        <span class="fa fa-bars" onclick="menutoggle()"></span>
-    </div>
-    
-</div>
+      </nav>
 </header>
 
 
-
-
-<script>
-    var menulist = document.getElementById('menulist');
-    menulist.style.maxHeight = "0px";
-
-    function menutoggle() {
-        if (menulist.style.maxHeight == "0px") {
-            menulist.style.maxHeight = "100vh";
-        } else {
-            menulist.style.maxHeight = "0px";
-        }
-    }
-
-</script>
 
 
 <section class="home">
@@ -144,10 +156,7 @@
 </section>
 
 
-
-
-
-<section class="about top">
+<section class="about top" id="about">
     <div class="container flex">
         <div class="left">
             <div class="heading">
@@ -163,6 +172,9 @@
         </div>
     </div>
 </section>
+
+
+
 
 <section class="counter top">
     <div class="container grid">
@@ -190,7 +202,7 @@
 </section>
 
 
-<section class="rooms">
+<section class="rooms" id="rooms">
     <div class="container top">
         <div class="heading">
             <h1>EXPLORE</h1>
@@ -770,5 +782,7 @@
     <p class="container">Copyright (c) 2022 Copyright Holder All Rights Reserved.</p>
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
